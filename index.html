@@ -67,6 +67,17 @@
       z-index: 1;
     }
 
+    @keyframes homeReveal {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     header {
       position: absolute;
       top: 0;
@@ -79,6 +90,7 @@
       padding: 2rem 6vw;
       flex-wrap: wrap;
       gap: 1rem;
+      animation: homeReveal 900ms ease both;
     }
 
     header h1 {
@@ -117,6 +129,7 @@
       z-index: 2;
       max-width: 700px;
       padding: 5rem 6vw;
+      animation: homeReveal 1100ms 180ms ease both;
     }
 
     .eyebrow {
@@ -320,6 +333,13 @@
 
       .cover-text {
         padding-top: 9rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      header,
+      .cover-text {
+        animation: none;
       }
     }
   </style>
