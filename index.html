@@ -377,9 +377,18 @@
   </footer>
 
   <script>
+    const headline = document.getElementById('headline');
+    const scrollToHeadline = behavior => {
+      headline.scrollIntoView({ behavior, block: 'center' });
+    };
+
     document.getElementById('home-name').addEventListener('click', event => {
       event.preventDefault();
-      document.getElementById('headline').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      scrollToHeadline('smooth');
+    });
+
+    window.addEventListener('load', () => {
+      window.setTimeout(() => scrollToHeadline('smooth'), 900);
     });
   </script>
 </body>
