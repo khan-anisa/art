@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anisa Khan | Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --ink: #17171a;
+      --paper: #f4f3ef;
+      --warm: #d7c3a5;
+      --muted: rgba(255, 255, 255, 0.75);
+      --panel: #1b1b1d;
+      --line: rgba(255, 255, 255, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #111214;
+      color: var(--paper);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .cover {
+      position: relative;
+      width: 100%;
+      background: #000;
+      overflow: visible;
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.05) 28%, rgba(0,0,0,0.58) 100%);
+      pointer-events: none;
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(215, 195, 165, 0.18), transparent 24%),
+        radial-gradient(circle at 75% 35%, rgba(255,255,255,0.08), transparent 18%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 6vw;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--paper);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      opacity: 0.9;
+      transition: border-color 0.2s ease, opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      border-bottom-color: var(--paper);
+      opacity: 1;
+    }
+
+    .cover-text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      max-width: 700px;
+      padding: 5rem 6vw;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .cover-text h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 6rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      margin-bottom: 1.4rem;
+      max-width: 620px;
+      font-weight: 400;
+    }
+
+    .cover-text p {
+      max-width: 560px;
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      background: var(--paper);
+      color: var(--ink);
+      border-color: var(--paper);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--paper);
+    }
+
+    main {
+      background: #141517;
+    }
+
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 5rem 6vw;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .section-header h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 2.8vw, 3rem);
+      letter-spacing: -0.05em;
+    }
+
+    .section-header p {
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .work-card {
+      background: linear-gradient(180deg, #1f1f22 0%, #171719 100%);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .art {
+      height: 260px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)),
+        linear-gradient(120deg, #7f4f3d 0%, #d7c3a5 35%, #2a2c2f 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .art.alt-1 {
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)), linear-gradient(120deg, #a76d57 0%, #e7d9be 35%, #17171a 100%);
+    }
+
+    .art.alt-2 {
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)), linear-gradient(120deg, #5a4d52 0%, #c9b59a 28%, #191a1d 100%);
+    }
+
+    .work-info {
+      padding: 1.2rem 1.2rem 1.5rem;
+    }
+
+    .work-meta {
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.5rem;
+    }
+
+    .work-info h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.3rem;
+      color: #fff;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .about-copy {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .about-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .profile-box {
+      background: #191a1d;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.5rem;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 6vw 3rem;
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .works-grid,
+      .about-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .cover-text {
+        padding-top: 9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <img class="hero-image" src="angel-balashev-tLZl3xaH7BI-unsplash.jpg" alt="">
+    <header>
+      <h1>Anisa Khan</h1>
+      <nav>
+        <a href="#works">Works</a>
+        <a href="about.html">About</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="cover-text">
+      <span class="eyebrow">Contemporary art practice</span>
+      <h2>Art for curious, quiet rooms.</h2>
+      <p>
+        I make visual work that explores texture, memory, and slow observation intended for collectors,
+        institutions, and curators looking for a distinct point of view.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="#works">View work</a>
+        <a class="button secondary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>hello@anisakhan.art</p>
+  </footer>
+</body>
+</html>
+
