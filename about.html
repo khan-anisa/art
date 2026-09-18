@@ -57,8 +57,14 @@
       margin-bottom: 3rem;
     }
 
-    p + p {
-      margin-top: 1rem;
+    .about-copy {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3rem;
+    }
+
+    .about-copy p {
+      margin: 0;
     }
 
     .profile-box {
@@ -71,6 +77,17 @@
     @media (max-width: 560px) {
       header {
         justify-content: center;
+      }
+
+      @media (max-width: 760px) {
+        .about-copy {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .about-copy p + p {
+          margin-top: 1rem;
+        }
       }
 
       nav {
@@ -91,22 +108,24 @@
 
   <main>
     <h2>About</h2>
-    <p>
-      Anisa Khan is a New York-based multidisciplinary artist and Creative Director whose practice explores
-      the intersection of Communication Design, visual arts, and human intuition.
-    </p>
-    <p>
-      A “commercial artist by day and thinker by sunset,” Khan transforms complex psychological insights
-      into visceral, layered environments. Holding a BFA in Visual Arts (Commercial Arts &amp; Photography)
-      and an MS in Information Experience Design from Pratt Institute (with distinction), her two-decade
-      career spans global agencies like JWT (VML) and academic leadership.
-      Her expertise moves seamlessly between mixed media and experiential design, bridging the interface
-      between emerging technology and human truth. Deeply influenced by the relationship between sound
-      and form, Khan is an asset for bespoke commissions in sonic visuals, experimental typography, brand
-      storytelling, illustrations, and digital arts. She specializes in the development of ideas, interactive and
-      spatial design, and, when AI tools are used in other projects, ethically sourced AI-assisted graphics.
-      The original artworks presented here are AI-free and contain no AI-generated imagery.
-    </p>
+    <div class="about-copy">
+      <p>
+        Anisa Khan is a New York-based multidisciplinary artist and Creative Director whose practice explores
+        the intersection of Communication Design, visual arts, and human intuition.
+      </p>
+      <p>
+        A “commercial artist by day and thinker by sunset,” Khan transforms complex psychological insights
+        into visceral, layered environments. Holding a BFA in Visual Arts (Commercial Arts &amp; Photography)
+        and an MS in Information Experience Design from Pratt Institute (with distinction), her two-decade
+        career spans global agencies like JWT (VML) and academic leadership.
+        Her expertise moves seamlessly between mixed media and experiential design, bridging the interface
+        between emerging technology and human truth. Deeply influenced by the relationship between sound
+        and form, Khan is an asset for bespoke commissions in sonic visuals, experimental typography, brand
+        storytelling, illustrations, and digital arts. She specializes in the development of ideas, interactive and
+        spatial design, and, when AI tools are used in other projects, ethically sourced AI-assisted graphics.
+        The original artworks presented here are AI-free and contain no AI-generated imagery.
+      </p>
+    </div>
     <div class="profile-box">Artist profile / CV / Statement</div>
   </main>
 </body>
