@@ -66,6 +66,17 @@
       }
     }
 
+    @keyframes imageReveal {
+      from {
+        opacity: 0;
+        transform: scale(0.94);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
     .work {
       animation: reveal 900ms ease both;
     }
@@ -85,7 +96,13 @@
       max-width: 100%;
       user-select: none;
       -webkit-user-drag: none;
+      transition: transform 500ms ease;
       width: auto;
+      animation: imageReveal 900ms ease both;
+    }
+
+    .work-image:hover {
+      transform: scale(1.03);
     }
 
     .deer-eye-image {
@@ -121,9 +138,13 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .work {
+      .work,
+      .work-image,
+      main > h1 {
         animation: none;
       }
+
+      .work-image { transition: none; }
     }
   </style>
 </head>
