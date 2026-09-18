@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, noimageindex, noai, noimageai">
+  <meta name="rights" content="Copyright Anisa Khan. Images may not be copied, downloaded, reproduced, or used to train AI systems without written permission.">
+  <title>Works | Anisa Khan I Art</title>
+  <link rel="icon" type="image/png" href="favicon-v2.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #181818;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.45;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2.25rem;
+    }
+
+    header a { color: inherit; text-decoration: none; }
+
+    nav { display: flex; gap: 1.5rem; font-size: 0.9rem; }
+
+    main {
+      margin: 0 auto;
+      max-width: 1120px;
+      padding: 3rem 2.25rem 5rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+
+    .work + .work { margin-top: 4.5rem; }
+
+    .work-image {
+      display: block;
+      height: auto;
+      max-height: 620px;
+      max-width: 100%;
+      user-select: none;
+      -webkit-user-drag: none;
+      width: auto;
+    }
+
+    .work-details { margin-top: 2rem; }
+
+    .work-details h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .work-details p { max-width: 1050px; }
+    .work-details p + p { margin-top: 1.65rem; }
+
+    .note {
+      border-bottom: 2px solid #648bc0;
+      border-top: 2px solid #648bc0;
+      color: #91afd2;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      margin: 2.5rem auto 0;
+      max-width: 860px;
+      padding: 1.3rem 0;
+    }
+
+    .copyright {
+      border-top: 1px solid #ddd;
+      color: #555;
+      font-size: 0.82rem;
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header, main { padding-left: 1.25rem; padding-right: 1.25rem; }
+      header { align-items: flex-start; flex-direction: column; gap: 0.6rem; }
+      .work + .work { margin-top: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Anisa Khan</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Works</h1>
+
+    <article class="work">
+      <img class="work-image" src="deers-eye-web.jpg" alt="The Deer's Eye artwork" draggable="false">
+      <div class="work-details">
+        <h2>Work 1: "The Deer’s Eye"</h2>
+        <p><strong>Medium:</strong> Mixed Media on Paper (Stippling, Watercolor, Pencil Color, Sketch Pens, and Ink)</p>
+        <p>This piece is a physical translation of Khan’s titular poem, which posits that beauty is first felt before it is ever perceived. Through a complex mixed media process involving patient stippling, watercolor, and ink, the artist captures a "sweet realization": while our vision can often be a serpent—misleading and superficial—true beauty resides in the heart. It is a work of quiet resistance that invites the viewer to move beyond sight and into the space of genuine feeling.</p>
+        <p class="note">Note: "I've integrated the essence of my poem into the description for 'The Deer's Eye' in case there isn't wall space for the full text, though I'm happy to provide the poem if space allows!"</p>
+      </div>
+    </article>
+
+    <article class="work">
+      <img class="work-image" src="elsewhere-web.jpg" alt="Elsewhere artwork" draggable="false">
+      <div class="work-details">
+        <h2>Work 2: "Elsewhere"</h2>
+        <p><strong>Medium:</strong> Digital Composition (Adobe Illustrator 3D &amp; Photoshop)</p>
+        <p>A visual translation of a recurring internal monologue: “Wondering why you’d rather be elsewhere, Wondering why you’re wondering why.” Leveraging her expertise in Communication Design and 3D typography, Khan extrudes and distorts this poetic refrain to create an iridescent landscape of introspection. The work contemplates the recursive nature of searching for an "elsewhere," only to find ourselves spiraling deeper into the question itself as language and thought echo into one another.</p>
+      </div>
+    </article>
+
+    <p class="copyright">© 2026 Anisa Khan. All rights reserved. These images may not be copied, downloaded, reproduced, redistributed, or used to train, test, or improve AI systems without written permission.</p>
+  </main>
+
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+</body>
+</html>

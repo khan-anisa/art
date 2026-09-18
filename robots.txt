@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /deers-eye-web.jpg
+Disallow: /elsewhere-web.jpg
+
+# These images are copyrighted artwork and are not licensed for AI training.
