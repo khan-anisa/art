@@ -55,6 +55,29 @@
 
     .work + .work { margin-top: 4.5rem; }
 
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .work {
+      animation: reveal 700ms ease both;
+    }
+
+    .work:nth-of-type(2) {
+      animation-delay: 160ms;
+    }
+
+    .work:nth-of-type(3) {
+      animation-delay: 320ms;
+    }
+
     .work-image {
       display: block;
       height: auto;
@@ -95,6 +118,12 @@
       header, main { padding-left: 6vw; padding-right: 6vw; }
       header { align-items: flex-start; flex-direction: column; gap: 0.6rem; }
       .work + .work { margin-top: 3.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .work {
+        animation: none;
+      }
     }
   </style>
 </head>
