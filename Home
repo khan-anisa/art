@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anisa Khan</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap');
+
+  :root {
+    --ink: #17171a;
+    --paper: #f4f3ef;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--paper);
+  }
+
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('YOUR-IMAGE-FILENAME.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.5) 100%);
+  }
+
+  header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+  }
+
+  nav a {
+    color: var(--paper);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+  }
+
+  nav a:hover { border-bottom-color: var(--paper); }
+
+  .cover-text {
+    position: absolute;
+    left: 6vw;
+    bottom: 3.5rem;
+    z-index: 2;
+    max-width: 640px;
+  }
+
+  .cover-text h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  main {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 0 6vw;
+  }
+
+  section {
+    padding: 4rem 0;
+    border-top: 1px solid #ddd9cd;
+  }
+
+  section h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .tile {
+    aspect-ratio: 4 / 5;
+    background: #e7e3d8;
+    border: 1px solid #ddd9cd;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.9rem;
+    font-size: 0.8rem;
+    color: #706c60;
+  }
+
+  footer {
+    background: var(--paper);
+    color: #706c60;
+    padding: 3rem 6vw 4rem;
+    border-top: 1px solid #ddd9cd;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    header { flex-direction: column; align-items: flex-start; }
+    nav { gap: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <header>
+    <h1>Anisa Khan</h1>
+    <nav>
+      <a href="#paintings">Paintings</a>
+      <a href="#digital">Digital works</a>
+      <a href="#typography">Typography</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+  <div class="cover-text">
+    <h2>Paintings, digital work, and typography.</h2>
+  </div>
+</div>
+
+<main>
+
+  <section id="paintings">
+    <h3>Paintings</h3>
+    <div class="grid">
+      <div class="tile">Painting 01</div>
+      <div class="tile">Painting 02</div>
+      <div class="tile">Painting 03</div>
+    </div>
+  </section>
+
+  <section id="digital">
+    <h3>Digital works</h3>
+    <div class="grid">
+      <div class="tile">Digital 01</div>
+      <div class="tile">Digital 02</div>
+      <div class="tile">Digital 03</div>
+    </div>
+  </section>
+
+  <section id="typography">
+    <h3>Typography</h3>
+    <div class="grid">
+      <div class="tile">Typography 01</div>
+      <div class="tile">Typography 02</div>
+      <div class="tile">Typography 03</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h3>About</h3>
+    <p style="max-width: 60ch; color: #706c60;">
+      Add a short bio here — background, medium, what you're currently exploring.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; 2026 Anisa Khan. All rights reserved.</span>
+  <span>hello@example.com</span>
+</footer>
+
+</body>
+</html>
