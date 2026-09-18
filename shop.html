@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, noimageindex, noai, noimageai">
+  <meta name="rights" content="Copyright Anisa Khan. All rights reserved. Artwork may not be copied or used for AI training.">
+  <title>Shop | Anisa Khan I Art</title>
+  <link rel="icon" type="image/png" href="favicon-v2.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #181818;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 6vw;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    a { color: inherit; }
+    nav { display: flex; gap: 2rem; font-size: 0.9rem; flex-wrap: wrap; }
+
+    main {
+      margin: 0 auto;
+      max-width: 1120px;
+      padding: 3rem 6vw 5rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-bottom: 3rem;
+    }
+
+    .listing {
+      border-top: 1px solid #ddd;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: minmax(180px, 0.7fr) 1.3fr;
+      padding: 2rem 0;
+    }
+
+    .listing-image {
+      align-self: start;
+      height: auto;
+      max-width: 100%;
+      width: 260px;
+    }
+
+    .listing h3 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      display: grid;
+      gap: 0.35rem;
+      margin: 1.2rem 0;
+    }
+
+    .purchase-link {
+      display: inline-block;
+      border: 1px solid #181818;
+      padding: 0.65rem 0.85rem;
+      text-decoration: none;
+    }
+
+    .purchase-link:hover { background: #181818; color: #fff; }
+
+    .notice {
+      border-top: 1px solid #ddd;
+      margin-top: 1rem;
+      padding-top: 2rem;
+    }
+
+    .notice p + p { margin-top: 0.8rem; }
+
+    @media (max-width: 700px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .listing { grid-template-columns: 1fr; }
+      .listing-image { width: min(260px, 100%); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Anisa Khan</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="press.html">Press</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Shop</h2>
+    <p class="intro">Selected original works and exclusive prints are available by inquiry. Both works are displayed in 2026 at the Pirate Studios Bushwick location by invitation, but are not for sale there. A sale through this site does not affect their display rights.</p>
+
+    <article class="listing">
+      <img class="listing-image" src="deers-eye-web.jpg" alt="The Deer's Eye artwork" draggable="false">
+      <div>
+        <h3>"The Deer’s Eye"</h3>
+        <div class="price">
+          <p><strong>Original:</strong> $12,000 USD</p>
+          <p><strong>Exclusive print, no resale:</strong> $6,000 USD</p>
+        </div>
+        <a class="purchase-link" href="mailto:hello@anisa.work?subject=Purchase%20inquiry%20-%20The%20Deer%27s%20Eye">Inquire to purchase</a>
+      </div>
+    </article>
+
+    <article class="listing">
+      <img class="listing-image" src="elsewhere-web.jpg" alt="Elsewhere artwork" draggable="false">
+      <div>
+        <h3>"Elsewhere"</h3>
+        <div class="price">
+          <p><strong>Original:</strong> $15,000 USD</p>
+          <p><strong>Exclusive print, no resale:</strong> $8,000 USD</p>
+        </div>
+        <a class="purchase-link" href="mailto:hello@anisa.work?subject=Purchase%20inquiry%20-%20Elsewhere">Inquire to purchase</a>
+      </div>
+    </article>
+
+    <section class="notice">
+      <p><strong>Exclusive prints:</strong> Available through December 2026.</p>
+      <p><strong>Custom prints:</strong> Please contact the studio beginning January 2027.</p>
+      <p>After availability is confirmed, payment instructions and shipping details will be provided privately. The website does not collect payment or card information.</p>
+    </section>
+  </main>
+</body>
+</html>
