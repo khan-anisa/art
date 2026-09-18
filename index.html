@@ -379,17 +379,36 @@
 
   <script>
     const headline = document.getElementById('headline');
-    const scrollToHeadline = behavior => {
-      headline.scrollIntoView({ behavior, block: 'center' });
+    const scrollToHeadline = (duration = 4200) => {
+      const start = window.scrollY;
+      const target = Math.max(
+        0,
+        Math.min(
+          document.documentElement.scrollHeight - window.innerHeight,
+          start + headline.getBoundingClientRect().top - (window.innerHeight - headline.offsetHeight) / 2
+        )
+      );
+      const startedAt = performance.now();
+      const easeInOut = progress => progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      const animateScroll = now => {
+        const progress = Math.min((now - startedAt) / duration, 1);
+        window.scrollTo(0, start + (target - start) * easeInOut(progress));
+        if (progress < 1) requestAnimationFrame(animateScroll);
+      };
+
+      requestAnimationFrame(animateScroll);
     };
 
     document.getElementById('home-name').addEventListener('click', event => {
       event.preventDefault();
-      scrollToHeadline('smooth');
+      scrollToHeadline();
     });
 
     window.addEventListener('load', () => {
-      window.setTimeout(() => scrollToHeadline('smooth'), 5000);
+      window.setTimeout(() => scrollToHeadline(), 5000);
     });
   </script>
 </body>
