@@ -379,7 +379,7 @@
 
   <script>
     const headline = document.getElementById('headline');
-    const scrollToHeadline = (duration = 4200) => {
+    const scrollToHeadline = (duration = 3000) => {
       const start = window.scrollY;
       const target = Math.max(
         0,
@@ -408,7 +408,7 @@
     });
 
     window.addEventListener('load', () => {
-      window.setTimeout(() => scrollToHeadline(), 5000);
+      window.setTimeout(() => scrollToHeadline(), 3500);
     });
   </script>
 </body>
